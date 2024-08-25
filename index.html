@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hare krishna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .contain {
+            height: 400px;
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h-screen w-full bg-blue-500 flex justify-center items-center  " id="front">
+        <div class="contain bg-white border rounded-md p-3 flex flex-col items-center shadow-3xl" id="main">
+            <img class="object-fit object-cover pd-5" src="https://wallpapercave.com/wp/wp6908990.jpg" alt="">
+
+            <h1 class="text-center font-bold text-4xl pt-3">Krishna</h1>
+            <div class="w-1/3 border h-1 rounded-xl bg-yellow-400 align-center"></div>
+            <h2 id="elem" class="text-2xl font-bold text-red-600 p-4">Stranger</h2>
+            <div class="flex items-center justify-between gap-3">
+                <button id="btn_2"
+                    class="border border-5 hidden rounded-md bg-blue-500 hover:bg-blue-400 cursor-pointer  text-white font-bond text-md px-5 py-2">View
+                    profile</button>
+                <button id="btn_1"
+                    class="border border-5 rounded-md bg-blue-500 hover:bg-blue-400 cursor-pointer text-white font-bond text-md px-5 py-2">Add
+                    Friend</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="h-screen w-full bg-white hidden" id="msg_section">
+        <div class="flex justify-between items-start py-6">
+            <div class="flex justify-center items-center gap-1">
+                <p class="font-bold text-xl md:text-3xl text-black pl-3 hover:bg-slate-100 hover:rounded-[50%] text-center"
+                    id="back"><ion-icon name="arrow-back-outline"></ion-icon></p>
+                <p class="font-bold text-xl md:text-3xl text-black pl-3"><ion-icon
+                        name="person-circle-outline"></ion-icon></p>
+                <p class=" text-xl md:text-2xl text-black pl-3">Prem mitra</p>
+            </div>
+            <div class="flex justify-center items-center gap-10">
+                <p
+                    class="font-bold text-xl md:text-3xl text-black pr-3 hover:bg-slate-100 hover:rounded-[50%] text-center">
+                    <ion-icon name="call-outline"></ion-icon>
+                </p>
+                <p
+                    class="font-bold text-xl md:text-3xl text-black pr-3 hover:bg-slate-100 hover:rounded-[50%] text-center">
+                    <ion-icon name="videocam-outline"></ion-icon>
+                </p>
+            </div>
+        </div>
+        <div class="px-2 py-6" id="Krishna_msg">
+            <p class="text-xl md:text-2xl text-black font-semibold pt-4"><ion-icon
+                    name="person-circle-outline"></ion-icon> Radhe Radhe!</p>
+            <p class="text-xl md:text-2xl text-black font-semibold pt-4"><ion-icon
+                    name="person-circle-outline"></ion-icon> Kase ho Sakha</p>
+            <p class="text-xl md:text-2xl text-black font-semibold pt-4"><ion-icon
+                    name="person-circle-outline"></ion-icon> Sukh mein toh ho na!</p>
+        </div>
+        <div>
+            <input type="text" id="value">
+            <div
+                class="w-full h-10 border border-black bottom-3 fixed rounded-xl text-3xl px-4 flex justify-between items-center pb-0">
+                <ion-icon name="camera-outline"></ion-icon> <input type="text"
+                    class=" text-black w-full h-8 font-semi-bold text-xl px-3 " id="my_msg">
+                <div class="flex items-center justify-center gap-2">
+                    <p><ion-icon name="mic-outline"></ion-icon></p>
+                    <p><ion-icon name="image-outline"></ion-icon></p>
+                    <p><ion-icon name="add-circle-outline"></ion-icon></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-full w-full hidden" id="profile">
+
+        <div class="md:h-12 h-10 w-full bg-blue-700 flex items-center justify-between fixed top-0 ">
+            <p class="text-white font-semibold px-6 texl-xl md:text-2xl ">Krishna's World</p>
+            <p class="text-3xl text-white font-extrabold pr-6 py-2 " id="menu"><ion-icon name="menu-outline">
+
+                    <div class="absolute bg-blue-800 bg-opacity-70 top-0 shadow-lg right-0 h-screen w-48 p-6 hidden "
+                        id="close">
+                        <p class="text-xl text-white fony-bold text-right pb-4"><ion-icon
+                                name="close-outline"></ion-icon></p>
+                        <div class="text-xl text-white fony-bold leading-loose">
+                            <p class=" hover:underline hover:cursor-pointer ">Profile</p>
+                            <p class=" hover:underline hover:cursor-pointer ">Likes</p>
+                            <p class=" hover:underline hover:cursor-pointer ">Activity</p>
+                            <p class=" hover:underline hover:cursor-pointer ">Privacy</p>
+                        </div>
+                        <p class="text-xl text-white fony-bold"><ion-icon name="gift-outline"></ion-icon></p>
+                        <p class=" bottom-5 absolute font-bold text-white text-2xl">Design by Swati</p>
+                    </div>
+
+        </div>
+        <div class="pt-10">
+            <div class="md:p-10 p-6 md:flex justify-between items-center">
+                <img class="md:h-40 md:w-40 h-28 w-28 rounded-full p-0"
+                    src="https://www.hinduwallpaper.com/uploads/26062021015708nzvm.jpg" alt="">
+
+                <div class="md:pl-16">
+                    <div class="md:flex hidden justify-between text-xl">
+                        <p>Followers <br> 1B+</p>
+                        <p>Following <br> 1k</p>
+                    </div>
+                    <h1 class="text-black font-bold text-3xl md:text-6xl ">Krishna</h1>
+                    <p class="text-slate-800 text-xl md:text-2xl leading-0">I'm the eighth avatar of Vishnu and also as
+                        the
+                        Supreme
+                        God. I'm the god of protection, compassion, tenderness, and love. <br> Radhe radhe..</p>
+                    <div class="flex items-center md:justify-between justify-evenly gap-3 md:gap-6">
+                        <button
+                            class="py-2 my-4 w-1/2 bg-blue-500 hover:bg-blue-400 text-white text-sm rounded-md hover:cursor-pointer"
+                            id="remove_frnd">Remove Friend</button>
+                        <button
+                            class="py-2 my-4 w-1/2 bg-blue-500 hover:bg-blue-400 text-white text-sm rounded-md hover:cursor-pointer"
+                            id="message">Message</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-8 bg-blue-300 flex   md:hidden">
+                <div class="text-xl font-bold text-black text-center bg-slate-100 w-1/3 border border-t-2  "><ion-icon
+                        name="albums-outline"></ion-icon></div>
+                <div class="text-xl font-bold text-black text-center bg-blue-300 w-1/3 "><ion-icon
+                        name="musical-note-outline"></ion-icon></div>
+                <div class="text-xl font-bold text-black text-center bg-blue-300 w-1/3"><ion-icon
+                        name="bookmark-outline"></ion-icon></div>
+            </div>
+            <div class=" flex flex-wrap justify-evenly bg-slate-100">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://wallpaperaccess.com/full/1105029.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://resizing.flixster.com/qRN8q48qrHreMAx1-pOEONpiH3M=/300x300/v2/https://flxt.tmsimg.com/assets/p10647296_i_h9_aa.jpg"
+                    alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://wallpaperaccess.com/full/4824176.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/736x/b7/cd/a0/b7cda03ddd0acea5c8d6c2a02233e854.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/originals/1f/ad/35/1fad35788377c724768a66ce7b7f24ed.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/originals/63/a4/c1/63a4c156f08b8a12fdad84ff898c28cc.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://wallpapercave.com/wp/wp7301186.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/originals/80/bb/00/80bb001b357f3f274e19a7fccf3cfbcc.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/736x/02/65/ad/0265ad77f0d2b1ee00dabe104245eb16.jpg" alt="">
+
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://wallpaperaccess.com/full/3867789.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/originals/76/e0/08/76e008b47929e5ad53b4bcb70f9fa948.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/736x/5e/21/89/5e2189b0b38dc25e19dbd60bc898800b.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/originals/88/8e/61/888e617d10be2a03f84ed5588a85ff29.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://cdn.dollsofindia.com/images/p/krishna-pictures/krishna-poster-NM02_l.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/originals/2b/17/e5/2b17e5c7d55860d08fda7e25f44b722c.png" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://wallpaperaccess.com/full/8263042.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://a10.gaanacdn.com/gn_img/song/a7LWBzWzXA/LWBzx2ePWz/size_l_1618176621.jpg" alt="">
+                <img class="h-24 md:h-48 w-24 md:w-48 my-2 mx-2 hover:cursor-pointer border border-black rounded-md hover:animate-pulse"
+                    src="https://i.pinimg.com/736x/26/00/90/26009025303f252d07fedddfaa581d78.jpg" alt="">
+
+            </div>
+            <footer class="pt-8">
+                <p class="md:h-10 h-6 w-full text-center bg-slate-300">All Right Reserved &copy Swati2024</p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var con = document.querySelector("#elem")
+        var btn_1 = document.querySelector("#btn_1")
+        var btn_2 = document.querySelector("#btn_2")
+        var profile = document.querySelector("#profile")
+        var front = document.querySelector("#front")
+        var remove_frnd = document.querySelector("#remove_frnd")
+        var menu = document.querySelector("#menu")
+        var close = document.querySelector("#close")
+        var message = document.querySelector("#message")
+        var back = document.querySelector("#back")
+        var msg_section = document.querySelector("#msg_section")
+        var my_msg = document.querySelector("#my_msg")
+        var value = document.querySelector("#value")
+
+        var check = 0;
+        function btn_func() {
+            btn_1.addEventListener("click", function () {
+                if (check == 0) {
+                    btn_1.innerHTML = "Remove Friend";
+                    con.innerHTML = "Friends";
+                    con.style.color = "Green";
+                    btn_2.style.display = "block";
+                    check = 1;
+                }
+                else {
+
+                    btn_1.innerHTML = "Add Friend";
+                    con.innerHTML = "Stranger";
+                    con.style.color = "red";
+                    btn_2.style.display = "none";
+                    check = 0;
+                }
+            })
+
+            btn_2.addEventListener("click", function () {
+                front.style.display = "none";
+                profile.style.display = "block";
+            })
+
+            remove_frnd.addEventListener("click", function () {
+                profile.style.display = "none";
+                front.style.display = "flex";
+            })
+
+            menu.addEventListener("click", function () {
+                menu.style.display = "none";
+                close.style.display = "block";
+            })
+            close.addEventListener("click", function () {
+                menu.style.display = "block";
+                close.style.display = "none";
+            })
+
+            message.addEventListener("click", function () {
+                msg_section.style.display = "block";
+                msg();
+                profile.style.display = "none";
+            })
+
+            back.addEventListener("click", function () {
+                msg_section.style.display = "none";
+                profile.style.display = "block";
+            })
+        }
+
+        btn_func();
+
+        gsap.from("#main", {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            delay: 0.5
+        })
+
+        function msg() {
+            gsap.from("#Krishna_msg p", {
+                opacity: 0,
+                duration: 2,
+                delay: 1,
+                stagger: 1
+            })
+        }
+
+    </script>
+</body>
+
+</html>
